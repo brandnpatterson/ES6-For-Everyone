@@ -1,4 +1,6 @@
 
+// New Variables
+
 // var - can be redefined and redeclared - function scope
 var height = 100
 console.log(height)

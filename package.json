@@ -1,10 +1,10 @@
 {
-  "name": "es6",
+  "name": "es6-for-everyone",
   "version": "1.0.0",
   "description": "es6 for everyone",
   "main": "index.html",
   "scripts": {
-    "start": "browser-sync start --server --files \"index.html\" --no-notify"
+    "start": "browser-sync start --server 'src' --files 'src' --no-notify"
   },
   "author": "Brandon Patterson",
   "license": "ISC",
