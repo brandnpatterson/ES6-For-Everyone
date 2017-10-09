@@ -1,11 +1,11 @@
 // Fat Arrow functions
 
 // Select all the list items on the page and convert to array
-const videos = Array.from(document.querySelectorAll('[data-time]'))
+const videos = Array.from(document.querySelectorAll('li[data-time]'))
 
 // Filter for only the elements that contain the word 'flexbox'
 const filtered = videos
-  .filter(video => video.textContent.toUpperCase().includes('flexbox'.toUpperCase()))
+  .filter(video => video.textContent.toLowerCase().includes('flexbox'))
   // map down to a list of time strings
   .map(video => video.dataset.time)
   // map to an array of seconds

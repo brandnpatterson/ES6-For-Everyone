@@ -1,10 +1,10 @@
-
 // New Variables
 
 // var - can be redefined and redeclared - function scope
 var height = 100
 console.log(height)
 
+// redeclared, as well as redefined
 var height = 200
 console.log(height)
 
@@ -23,6 +23,7 @@ if (age > 12) {
   console.log(`You are ${dogYears} dog years old`)
 }
 
+// block scoped
 for (let i = 0; i < 10; i++) {
   setTimeout(() => {
     console.log(`The number is ${i}`)
@@ -36,7 +37,7 @@ const person = {
   age: 29
 }
 
-// replaces iife
+// replaces iife because it is block scoped
 {
   const computer = {
     model: 'Mac',
@@ -48,4 +49,4 @@ const person = {
 
 // temporal dead zone === You may not access a variable before it is defined
 console.log(pizza)
-const pizza = 'Deep Dish 🍕🍕🍕'
+var pizza = 'Deep Dish 🍕🍕🍕'

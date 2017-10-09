@@ -5,6 +5,14 @@ const names = ['wes', 'kait', 'lux']
 const fullNames = names.map(name => `${name} bos`)
 console.log(fullNames)
 
+// possible named function
+const fullNames2 = names.map(function myFuction(name) {
+  // explicit return value
+  return name + ' bos'
+})
+
+console.log(fullNames2)
+
 // anonymous functions
 const sayName = (name) => { console.log(`Hey ${name}!`) }
 sayName('Brandon')
@@ -19,13 +27,13 @@ console.table(win)
 
 const ages = [23, 62, 45, 234, 2, 62, 234, 62, 34]
 const old = ages.filter(a => a > 50)
-const old2 = ages.filter(function(a) {
-  if (a > 50) {
-    return a
-  } else {
-    return
-  }
-})
+// const old2 = ages.filter(function(a) {
+//   if (a > 50) {
+//     return a
+//   } else {
+//     return
+//   }
+// })
 console.log(old)
 
 // this not rebound with fat arrow functions
@@ -55,8 +63,10 @@ function calculateBill (total, tax = 0.13, tip = 0.15) {
 const totalBill = calculateBill(100, undefined, 0.25)
 console.log(totalBill)
 
+/*
+ * When to not use fat arrow syntax
+*/
 
-// when to not use fat arrow syntax
 // when you need a method to bind to an object
 const person = {
   points: 23,
