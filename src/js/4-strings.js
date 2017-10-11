@@ -21,10 +21,3 @@ function leftPad(str, length = 120) {
 console.log(leftPad(make))
 console.log(leftPad(model))
 console.log(leftPad(color))
-
-
-const styled.div = `
-  .hello {
-    color: blue;
-  }
-`
