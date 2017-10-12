@@ -1,3 +1,4 @@
+// array.from
 const people = Array.from(document.querySelectorAll('.people p'))
 const peopleArray = Array.from(people, p => p.textContent)
 // console.log(peopleArray)
@@ -43,3 +44,12 @@ const postIndex = posts.findIndex(post => post.code === code)
 
 console.log(post.caption)
 console.log(postIndex)
+
+// array.some
+const ages = [32, 15, 19, 12];
+
+const adultPresent = ages.some(age => age >= 18);
+console.log(adultPresent);
+
+const allOldEnough = ages.every(age => age >= 19);
+console.log(allOldEnough);
