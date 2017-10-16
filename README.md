@@ -1,3 +1,3 @@
-### ES6 For Everyone
+# ES6 For Everyone
 
-## Personal notes for https://es6.io/
+### Personal notes for https://es6.io/
