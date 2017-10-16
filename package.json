@@ -2,14 +2,27 @@
   "name": "es6-for-everyone",
   "version": "1.0.0",
   "description": "es6 for everyone",
-  "main": "index.html",
+  "main": "src/index.html",
   "scripts": {
-    "start": "browser-sync start --server 'src' --files 'src' --no-notify"
+    "build": "webpack --progress --watch",
+    "start": "npm run build & browser-sync start --server 'public' --files 'public' --no-notify"
   },
   "author": "Brandon Patterson",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.16.2",
+    "flickity": "^2.0.10",
+    "insane": "^2.6.2",
+    "jquery": "^3.2.1",
+    "jsonp": "^0.2.1",
+    "lodash": "^4.17.4",
+    "slug": "^0.9.1"
+  },
   "devDependencies": {
-    "browser-sync": "^2.18.13"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
+    "webpack": "^3.7.1"
   }
 }
