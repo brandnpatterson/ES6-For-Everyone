@@ -61,13 +61,47 @@ function hydrateAuthor(post) {
   })
 }
 
-getPostById(2)
-  .then(post => {
-    return hydrateAuthor(post);
+// getPostById(1)
+//   .then(post => {
+//     return hydrateAuthor(post);
+//   })
+//   .then(post => {
+//     console.log(post);
+//   })
+//   .catch(err => {
+//     console.log(err);
+//   });
+//
+// Promise.all -- using multiple promises
+// const weather = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve({ temp: 29, conditions: 'Sunny with Clouds'});
+//   }, 2000);
+// });
+//
+// const tweets = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     resolve(['I like cake', 'BBQ is good too!']);
+//   }, 500);
+// });
+//
+// Promise
+//   .all([weather, tweets])
+//   .then(responses => {
+//     const [weatherInfo, tweetsInfo] = responses;
+//     console.log(weatherInfo, tweetsInfo);
+//   });
+
+const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+
+Promise
+  .all([postsPromise, streetCarsPromise])
+  .then(responses => {
+    // there are many different types of data that can come back
+    // it isn't always JSON
+    return Promise.all(responses.map(res => res.json()))
   })
-  .then(post => {
-    console.log(post);
+  .then(responses => {
+    console.log(responses);
   })
-  .catch(err => {
-    console.log(err);
-  });
