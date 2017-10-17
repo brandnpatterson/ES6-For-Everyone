@@ -22,4 +22,4 @@
 // const profile = createURL(brandon.name);
 // console.log(profile);
 // import './js/13_classes1-prototypal';
-import './js/13_classes2';
+import './js/13_classes3';
