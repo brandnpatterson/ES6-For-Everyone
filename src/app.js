@@ -11,15 +11,17 @@
 // import './js/9_object-literals';
 // import './js/10_promises';
 // import './js/11_symbols';
-// import './js/12_modules';
+// import './js/13_modules';
 // import {
 //   apiKey as myKey,
 //   sayHi,
-//   url } from './js/12-modules-config';
+//   url } from './js/13-modules-config';
 // import User, { createURL, gravatar } from './js/12-modules-more';
 //
 // const brandon = new User('Brandon', 'brandnpatterson@gmail.com', url);
 // const profile = createURL(brandon.name);
 // console.log(profile);
-// import './js/13_classes1-prototypal';
-import './js/13_classes3';
+// import './js/15_classes1-prototypal';
+// import './js/15_classes3';
+// import './js/16_generators';
+import './js/17_proxies';

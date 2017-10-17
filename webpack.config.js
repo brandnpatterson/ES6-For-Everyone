@@ -4,7 +4,10 @@ const nodeEnv = process.env.NODE_ENV || 'production';
 module.exports = {
   devtool: 'source-map',
   entry: {
-    filename: './src/app.js'
+    app: [
+      'regenerator-runtime/runtime',
+      './src/app.js'
+    ]
   },
   output:  {
     filename: './public/js/bundle.js'
