@@ -2,27 +2,40 @@
 //   this.name = name;
 //   this.breed = breed;
 // }
-// Dog.prototype.bark = function () {
+// Dog.prototype.speak = function () {
 //   console.log(`Bark! Bark! My name is ${this.name}`);
 // }
 //
 // const snickers = new Dog('Snickers', 'King Charles');
 // const sunny = new Dog('Sunny', 'King Charles');
 //
-// console.log(snickers.bark());
-// console.log(sunny.bark());
+// console.log(snickers.speak());
+// console.log(sunny.speak());
 
 // class expression
 // const Dog = class {
 //
 // }
 // class declaration
+
+function Cat (name, breed) {
+  this.name = name;
+  this.breed = breed;
+}
+
+Cat.prototype.speak = function () {
+  console.log(`Meow! Meow! My name is ${this.name}`);
+}
+Cat.prototype.cuddle = function () {
+  console.log('I love you owner!');
+}
+
 class Dog {
   constructor (name, breed) {
     this.name = name;
     this.breed = breed;
   }
-  bark () {
+  speak () {
     console.log(`Bark! Bark! My name is ${this.name}`);
   }
   cuddle () {
@@ -46,7 +59,7 @@ class Dog {
 const snickers = new Dog('Snickers', 'King Charles');
 const sunny = new Dog('Sunny', 'King Charles');
 
-console.log(snickers.bark());
+console.log(snickers.speak());
 console.log(sunny.cuddle());
 console.log(Dog.info());
 console.log(snickers.description);
