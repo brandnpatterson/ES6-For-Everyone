@@ -27,4 +27,5 @@
 // import './js/17_proxies';
 // import './js/18_sets';
 // import './js/19_maps';
-import './js/20_async-await';
+// import './js/20_async-await';
+import './js/21_beyond';
