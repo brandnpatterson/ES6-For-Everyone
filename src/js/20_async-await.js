@@ -155,7 +155,6 @@ const users = [
   'stolinski'
 ];
 
-
 !async function getData (names) {
   const promises = names
     .map(name => fetch(`https://api.github.com/users/${name}`)
